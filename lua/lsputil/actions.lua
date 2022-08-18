@@ -30,7 +30,7 @@ function M.close_selected_handler(index, command)
 	local buffer = api.nvim_get_current_buf()
         vim.cmd(string.format(":tab sb %d", buffer))
     end
-    vim.lsp.util.jump_to_location(location)
+    vim.lsp.util.jump_to_location(location, 'utf-8')
     vim.cmd(':normal! zz')
     M.items = nil
 end

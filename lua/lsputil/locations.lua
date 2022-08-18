@@ -138,10 +138,10 @@ local definition_handler = function(_,locations, ctx, _)
 	    end
 	    opts.data = nil
 	else
-	    vim.lsp.util.jump_to_location(locations[1])
+	    vim.lsp.util.jump_to_location(locations[1], 'utf-8')
 	end
     else
-	vim.lsp.util.jump_to_location(locations)
+	vim.lsp.util.jump_to_location(locations, 'utf-8')
     end
 end
 
